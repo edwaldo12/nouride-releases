@@ -170,6 +170,8 @@ curl -fsSL https://get.nouride.com/install.sh | sudo sh -s -- --variant router
 
 > **Note on Alpine / Musl:** The `-musl` build requires `libstdc++` (`apk add libstdc++`).
 
+> **Note on macOS:** No macOS build is published yet; releases are the four Linux targets above. `install.sh` does carry a Darwin branch: it installs into `~/nouride` as the current user (no `sudo`), writes a launchd agent `tech.nouverse.nouride`, and links `~/.local/bin/nouride`. It only installs from a tarball you built yourself: `sh install.sh --tarball nouride-darwin-arm64.tar.gz`. Known Darwin issues and the fixes that worked are tracked in [#7](https://github.com/nouverse/nouride-releases/issues/7).
+
 SHA256 checksums are attached to every release — `SHA256SUMS` for the standard build,
 `SHA256SUMS-router` for the Router variant.
 
